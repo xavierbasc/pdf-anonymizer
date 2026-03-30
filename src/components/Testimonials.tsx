@@ -3,8 +3,6 @@ import { useInView } from '../hooks/useInView'
 
 interface Testimonial {
   name: string
-  role: string
-  company: string
   initials: string
   avatarColor: string
   text: string
@@ -13,30 +11,24 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Elena Martínez Soria',
-    role: 'Responsable de Cumplimiento (DPO)',
-    company: 'Grupo Financiero Iberia',
+    name: 'Elena M.',
     initials: 'EM',
     avatarColor: 'bg-violet-100 text-violet-700',
     text: 'PDF Anonymizer ha simplificado enormemente nuestra operativa de protección de datos. Antes tardábamos horas en anonimizar expedientes manualmente; ahora el proceso es automático y queda auditado. El hecho de que todo funcione de forma local nos da total tranquilidad respecto al cumplimiento del RGPD.',
     rating: 5,
   },
   {
-    name: 'Carlos Fuentes Álvarez',
-    role: 'Abogado — Área de Privacidad y Protección de Datos',
-    company: 'Despacho Fuentes & Asociados',
+    name: 'Carlos F.',
     initials: 'CF',
     avatarColor: 'bg-cyan-100 text-cyan-700',
-    text: 'Manejamos documentación sensible a diario y la confidencialidad es innegociable. Esta herramienta nos permite preparar documentos para litigios sin riesgo de exposición de datos personales. La detección de DNIs, IBANs y nombres es muy precisa y el log de auditoría resulta valiosísimo ante cualquier inspección.',
+    text: 'Manejamos documentación sensible a diario y la confidencialidad es innegociable. Esta herramienta nos permite preparar documentos sin riesgo de exposición de datos personales. La detección de DNIs, IBANs y nombres es muy precisa y el log de auditoría resulta valiosísimo ante cualquier inspección.',
     rating: 5,
   },
   {
-    name: 'Sofía Vidal Romero',
-    role: 'Directora de Recursos Humanos',
-    company: 'Tecnologías Solano S.L.',
+    name: 'Sofía V.',
     initials: 'SV',
     avatarColor: 'bg-emerald-100 text-emerald-700',
-    text: 'Usamos PDF Anonymizer para anonimizar currículums y contratos antes de cederlos a terceros proveedores. La instalación es trivial, no requiere Internet y el rendimiento es más que suficiente para nuestro volumen. Sin duda la mejor solución que hemos encontrado para este problema tan concreto.',
+    text: 'Usamos PDF Anonymizer para anonimizar currículums y contratos antes de cederlos a terceros. La instalación es trivial, no requiere Internet y el rendimiento es más que suficiente para nuestro volumen. Sin duda la mejor solución que hemos encontrado para este problema tan concreto.',
     rating: 5,
   },
 ]
@@ -89,9 +81,6 @@ function TestimonialCard({ testimonial, delay, isParentVisible }: TestimonialCar
           <div className="text-sm font-semibold text-slate-900">
             {testimonial.name}
           </div>
-          <div className="text-xs text-slate-500">
-            {testimonial.role} · {testimonial.company}
-          </div>
         </div>
       </div>
     </article>
@@ -120,8 +109,8 @@ export default function Testimonials() {
             Confianza de profesionales
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto text-base leading-relaxed">
-            Abogados, responsables de cumplimiento y profesionales de RRHH
-            confían en PDF Anonymizer para proteger la privacidad de sus clientes.
+            Profesionales que manejan documentación sensible confían en PDF Anonymizer
+            para proteger la privacidad en su día a día.
           </p>
         </div>
 
