@@ -104,9 +104,12 @@ jobs:
           retention-days: 1
 
   # ── Release público en este mismo repo ──────────────────────────────────────
+  # Se publica aunque algún build haya fallado: se suben los artefactos
+  # disponibles y se omiten los que no existieron.
   release:
     name: Publish release
     needs: build
+    if: always() && !cancelled() && needs.build.result != 'skipped'
     runs-on: ubuntu-latest
 
     steps:
@@ -115,6 +118,11 @@ jobs:
         with:
           merge-multiple: true
           path: artifacts
+        continue-on-error: true
+
+      - name: Check artifacts exist
+        run: |
+          ls artifacts/ || { echo "No artifacts found"; exit 1; }
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
