@@ -17,7 +17,7 @@ function DocumentMockup() {
             <span className="w-3 h-3 rounded-full bg-green-400" />
           </div>
           <div className="flex-1 bg-slate-700 rounded-md h-5 mx-4 flex items-center px-2">
-            <span className="text-slate-400 text-[10px] font-mono">CSC — Anonimizador de PDFs</span>
+            <span className="text-slate-400 text-[10px] font-mono">Anonimizador de PDFs</span>
           </div>
         </div>
 
