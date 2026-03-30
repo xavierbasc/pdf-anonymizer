@@ -7,9 +7,9 @@ const platforms = [
   {
     icon: Monitor,
     name: 'macOS',
-    subtitle: 'Intel & Apple Silicon',
-    file: 'PDFAnonymizer-macOS.zip',
-    note: 'macOS 10.15 Catalina o superior',
+    subtitle: 'Apple Silicon (M1/M2/M3/M4)',
+    file: 'PDFAnonymizer-macOS-AppleSilicon.zip',
+    note: 'macOS 12 o superior · arm64',
     color: 'text-slate-700',
     bg: 'bg-slate-50',
     border: 'border-slate-200 hover:border-cyan-300',

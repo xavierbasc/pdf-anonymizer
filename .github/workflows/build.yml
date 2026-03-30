@@ -27,10 +27,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-13            # Intel x86_64
-            platform: macOS-Intel
-            artifact: PDFAnonymizer-macOS-Intel.zip
-
           - os: macos-14            # Apple Silicon arm64
             platform: macOS-AppleSilicon
             artifact: PDFAnonymizer-macOS-AppleSilicon.zip
@@ -140,7 +136,6 @@ jobs:
             | Plataforma | Archivo |
             |---|---|
             | macOS — Apple Silicon (M1/M2/M3/M4) | `PDFAnonymizer-macOS-AppleSilicon.zip` |
-            | macOS — Intel (x86_64) | `PDFAnonymizer-macOS-Intel.zip` |
             | Windows 10/11 (x64) | `PDFAnonymizer-Windows.zip` |
             | Linux (Ubuntu 22.04+) | `PDFAnonymizer-Linux.tar.gz` |
 
