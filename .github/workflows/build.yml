@@ -1,10 +1,10 @@
 name: Build & Release
 
-# Compila la aplicación para macOS, Windows y Linux y publica un release
-# en este repositorio público para que las descargas sean accesibles.
+# Compila la aplicación para macOS Intel, macOS Apple Silicon, Windows y Linux
+# y publica un release en este repositorio público.
 #
-# Secreto requerido en este repo (Settings → Secrets → Actions):
-#   APP_REPO_TOKEN — PAT con scope "repo" (lectura) sobre xavierbasc/pdf-anonymizer-app
+# Secreto requerido (Settings → Secrets → Actions):
+#   APP_REPO_TOKEN — PAT con lectura sobre xavierbasc/pdf-anonymizer-app
 #
 # Cómo lanzar:
 #   Actions → Build & Release → Run workflow → introducir versión (ej. v1.0.0)
@@ -27,9 +27,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-14            # Apple Silicon (arm64)
-            platform: macOS
-            artifact: PDFAnonymizer-macOS.zip
+          - os: macos-12            # Intel x86_64
+            platform: macOS-Intel
+            artifact: PDFAnonymizer-macOS-Intel.zip
+
+          - os: macos-14            # Apple Silicon arm64
+            platform: macOS-AppleSilicon
+            artifact: PDFAnonymizer-macOS-AppleSilicon.zip
 
           - os: windows-latest
             platform: Windows
@@ -123,7 +127,8 @@ jobs:
 
             | Plataforma | Archivo |
             |---|---|
-            | macOS (Apple Silicon) | `PDFAnonymizer-macOS.zip` |
+            | macOS — Apple Silicon (M1/M2/M3/M4) | `PDFAnonymizer-macOS-AppleSilicon.zip` |
+            | macOS — Intel (x86_64) | `PDFAnonymizer-macOS-Intel.zip` |
             | Windows 10/11 (x64) | `PDFAnonymizer-Windows.zip` |
             | Linux (Ubuntu 22.04+) | `PDFAnonymizer-Linux.tar.gz` |
 
