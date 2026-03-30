@@ -1,6 +1,4 @@
-import { ShieldCheck, Github, FileText, BookOpen } from 'lucide-react'
-
-const GITHUB_URL = 'https://github.com/xavierbasc/pdf-anonymizer-app'
+import { ShieldCheck } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -21,45 +19,6 @@ export default function Footer() {
               sin telemetría, cumplimiento RGPD garantizado.
             </p>
           </div>
-
-          {/* Links */}
-          <nav aria-label="Footer navigation">
-            <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-              <li>
-                <a
-                  href={GITHUB_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors duration-200"
-                >
-                  <Github className="w-4 h-4" />
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href={GITHUB_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors duration-200"
-                >
-                  <BookOpen className="w-4 h-4" />
-                  Documentación
-                </a>
-              </li>
-              <li>
-                <a
-                  href={GITHUB_URL + '/blob/main/LICENSE'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors duration-200"
-                >
-                  <FileText className="w-4 h-4" />
-                  Licencia
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
 
         {/* Bottom bar */}
