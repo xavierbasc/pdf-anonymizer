@@ -141,15 +141,14 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-10">
             <a
-              id="descargar"
-              href="https://github.com/xavierbasc/pdf-anonymizer-app"
+              href="#descargar"
               className="inline-flex items-center gap-2.5 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold text-sm px-7 py-3.5 rounded-full shadow-md shadow-cyan-500/25 hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-200 active:scale-95"
             >
               <Download className="w-4 h-4" />
               Descargar gratis
             </a>
             <a
-              href="https://github.com/xavierbasc/pdf-anonymizer-app"
+              href="#documentacion"
               className="inline-flex items-center gap-2.5 border border-slate-200 hover:border-slate-300 text-slate-700 hover:text-slate-900 font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:bg-slate-50 active:scale-95"
             >
               Ver documentación

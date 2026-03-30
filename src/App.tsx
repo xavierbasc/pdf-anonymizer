@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
 import Downloads from './components/Downloads'
+import Documentation from './components/Documentation'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 
@@ -15,6 +16,7 @@ export default function App() {
         <Features />
         <HowItWorks />
         <Downloads />
+        <Documentation />
         <Testimonials />
       </main>
       <Footer />

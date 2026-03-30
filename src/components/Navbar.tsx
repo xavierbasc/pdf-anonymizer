@@ -4,7 +4,7 @@ import { ShieldCheck, Menu, X } from 'lucide-react'
 const navLinks = [
   { label: 'Características', href: '#caracteristicas' },
   { label: 'Cómo funciona', href: '#como-funciona' },
-  { label: 'Seguridad', href: '#seguridad' },
+  { label: 'Documentación', href: '#documentacion' },
 ]
 
 export default function Navbar() {
