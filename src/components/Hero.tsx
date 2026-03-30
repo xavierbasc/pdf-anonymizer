@@ -161,7 +161,7 @@ export default function Hero() {
             {[
               { icon: '🔒', label: '100% Local' },
               { icon: '☁️', label: 'Sin datos en la nube' },
-              { icon: '🔓', label: 'Código abierto' },
+              { icon: '✅', label: 'Uso libre' },
             ].map(({ icon, label }) => (
               <div
                 key={label}
