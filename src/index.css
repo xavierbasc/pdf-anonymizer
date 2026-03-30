@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .animate-on-enter {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-enter.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+
+  .animate-fade-in.is-visible {
+    opacity: 1;
+  }
+}
