@@ -75,6 +75,10 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
+      - name: Reinstall CPU-only torch (Linux)
+        if: runner.os == 'Linux'
+        run: pip install torch==2.2.2+cpu --extra-index-url https://download.pytorch.org/whl/cpu
+
       - name: Build with PyInstaller
         run: pyinstaller app.spec
 
