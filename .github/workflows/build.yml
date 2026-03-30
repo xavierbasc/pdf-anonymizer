@@ -27,7 +27,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-12            # Intel x86_64
+          - os: macos-13            # Intel x86_64
             platform: macOS-Intel
             artifact: PDFAnonymizer-macOS-Intel.zip
 
