@@ -22,7 +22,7 @@ const steps: Step[] = [
     icon: Cpu,
     title: 'Procesamiento automático',
     description:
-      'La app aplica OCR, NER y regex en tres pasadas sucesivas para detectar y redactar todos los datos personales identificados.',
+      'La app aplica OCR, NER y regex en tres pasadas sucesivas para detectar y anonimizar todos los datos personales identificados.',
   },
   {
     number: '03',

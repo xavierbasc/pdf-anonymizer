@@ -83,8 +83,8 @@ function MockupProcessing() {
         </div>
         {/* Log line */}
         <div className="bg-slate-900 rounded-lg p-2 font-mono">
-          <p className="text-[9px] text-green-400">✓ NER: "García Martínez" → redactado (conf. 0.94)</p>
-          <p className="text-[9px] text-green-400">✓ Regex: DNI 48291034X → redactado</p>
+          <p className="text-[9px] text-green-400">✓ NER: "García Martínez" → anonimizado (conf. 0.94)</p>
+          <p className="text-[9px] text-green-400">✓ Regex: DNI 48291034X → anonimizado</p>
           <p className="text-[9px] text-cyan-400 animate-pulse">▶ procesando pág. 3…</p>
         </div>
       </div>
@@ -142,9 +142,9 @@ const steps = [
   },
   {
     number: '02',
-    title: 'La IA detecta y redacta',
+    title: 'La IA detecta y anonimiza',
     description:
-      'Al pulsar Procesar, la aplicación analiza cada página con OCR, identifica nombres, DNIs, IBANs, teléfonos, emails y direcciones, y los redacta de forma irreversible.',
+      'Al pulsar Procesar, la aplicación analiza cada página con OCR, identifica nombres, DNIs, IBANs, teléfonos, emails y direcciones, y los anonimiza de forma irreversible.',
     detail: 'Puedes ver en tiempo real la página original y su versión anonimizada mientras se procesa.',
     mockup: <MockupProcessing />,
   },
@@ -173,8 +173,8 @@ const faqs = [
     a: 'Sí. Desde Opciones → Configuración puedes añadir, editar o desactivar patrones regex personalizados sin necesidad de reiniciar la aplicación.',
   },
   {
-    q: '¿La redacción es permanente?',
-    a: 'Sí. La aplicación aplica redacciones reales sobre el PDF (no solo oculta el texto visualmente). El contenido redactado no puede recuperarse.',
+    q: '¿La anonimización es permanente?',
+    a: 'Sí. La aplicación aplica anonimizaciones reales sobre el PDF (no solo oculta el texto visualmente). El contenido anonimizado no puede recuperarse.',
   },
   {
     q: '¿Funciona con PDFs escaneados en papel?',
